@@ -2,10 +2,10 @@ import React from "react";
 import CartIcon from "../cart/CartIcon";
 import classes from "./HeaderCartButton.module.css";
 import { useContext } from "react";
-import CartContest from "../../store/cart-context";
+import CartContext from "../../store/cart-context";
 
 const HeaderCartButton = (props) => {
-  const cartCtx = useContext(CartContest);
+  const cartCtx = useContext(CartContext);
 
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
